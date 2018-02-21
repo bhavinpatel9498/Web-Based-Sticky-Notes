@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ITMD565 Project1 Bhavinkumar Patel - bpatel68@hawk.iit.edu</title>
+
+	<meta charset="UTF-8">
+	<!--  Using Bootstrap CSS CDN -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  	<script src="ProjectValidations.js"></script>
+
+</head>
+<body>
+	<div id="contentWrapper" class="container">
+		<div id="panelWrapper" class="panel-group">
+    		<div id="primaryPanelWrapper" class="panel panel-primary">
+	      		<div align="center" id="panelHeaderWrappper" class="panel-heading">
+	      			<h1>My Notes Application</h1>
+	      			<h4>Bhavinkumar Patel - bpatel68@hawk.iit.edu</h4>
+	       		</div>
+	      		<div id="panelBodyWrapper" class="panel-body">
+	      			<div align="center"  id="panelBodyButton">
+	      				<button id="addBtnId" class="btn-success btn-lg">Add New Note</button>					
+	      			</div>
+				  	<br/>
+	      			<div id="panelBodyElements" style="display: none">
+						<div class="form-group">
+					    	<label for="subjectId">Subject</label>
+					    	<input type="text" class="form-control" id="subjectId" placeholder="Enter note subject">	
+					   		<label for="authorNameId">Author</label>
+					    	<input type="text" class="form-control" id="authorNameId" placeholder="Enter author name">	    	
+					  	</div>
+					  	<div class="form-group">
+					    	<label for="noteMessageId">Message</label>
+					    	<textarea class="form-control" id="noteMessageId" rows="3" placeholder="Enter note message"></textarea>
+					  	</div>
+						<div class="form-group" id="timeDivId" style="visibility:hidden">
+					    	<label for="subjectId">Date and Time</label>
+					    	<input type="text" class="form-control" id="timeStampId" readonly="true">		    	
+					  	</div>		
+					  	<div class="form-group" style="display: none">
+					  		<label for="subjectId">Key</label>
+					  		<input type="text" class="form-control" id="reckeyId">
+					  	</div>
+
+					  	<div id="saveNoteBtn" style="visibility:hidden">			  	
+					  		<button type="button" id="mainSaveBtnId" class="btn btn-primary">Save Note</button>
+					  		<button type="button" id="mainCloseBtnId" class="btn btn-warning">Close</button>
+					  	</div>
+					  	<div id="updateNoteBtn" style="visibility:hidden">			  	
+					  		<button type="button" id="mainUpdateBtnId" class="btn btn-primary">Update Note</button>					  	
+					  		<!-- <button type="button" id="mainDelBtnId" class="btn btn-danger">Delete Note</button> -->
+					  		<button type="button" id="mainCloseBtnId1" class="btn btn-warning">Close</button>
+					  	</div>					  	
+	      			</div>
+	      		</div>
+	      		<div id="resultCount">	      			
+	      		</div>
+      			<div id="resultWrapper" style="visibility:hidden">
+      				<table class="table table-hover">
+					    <thead>
+					      <tr>
+					      	<th>SrNo</th>
+					        <th>Subject</th>
+					        <th>Characters</th>
+					        <th>Time</th>
+					        <th>Edit</th>
+					        <th>Delete</th>
+					      </tr>
+					    </thead>
+					    <tbody id="tbodyId">
+					    </tbody>
+					</table>
+      			</div>
+    		</div>
+		</div>
+	</div>
+</body>
+</html>
